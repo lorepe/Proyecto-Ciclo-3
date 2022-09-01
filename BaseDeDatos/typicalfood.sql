@@ -195,6 +195,14 @@ ALTER TABLE `usuario` MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 -- --------------------------------------------------------
 
 --
+-- AUTO_INCREMENT de la tabla `pedido`
+--
+
+ALTER TABLE `pedido` MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+
+-- --------------------------------------------------------
+
+--
 -- Foreign key para tablas typicalfood
 --
 
