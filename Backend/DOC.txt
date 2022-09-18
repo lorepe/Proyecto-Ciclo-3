@@ -1,1 +1,4 @@
-sdfsfd
+Modelado Entidades --
+Conexion base de datos 
+Consumo api desde el front
+
