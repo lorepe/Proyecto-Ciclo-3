@@ -100,7 +100,7 @@ CREATE TABLE IF NOT EXISTS `TFBD`.`pedido` (
   `idplatillo` INT NULL,
   `cantidad` TINYINT(4) NULL,
   `valor_total` DECIMAL(10,2) NULL,
-  `fecha` VARCHAR(45) NULL,
+  `fecha` DATETIME NULL,
   `tipo_entrega` VARCHAR(20) NULL,
   `direccion` VARCHAR(100) NULL,
   `estado` TINYINT(4) NULL,
