@@ -21455,7 +21455,58 @@ input[type="text"] {
   border-radius: 25px;
 }
 
+#acerca {
+  margin-right: 5px;
+  width: 13rem;
+  height: 24rem;
+  text-align: center;
+  margin-bottom: 6rem;
+  margin-top: 2px;
+
+}
+
+#acerca:hover {
+  background-color: #F17228;
+  color: white;
+  cursor: pointer;
+}
+
+#titleAcerca {
+  margin-bottom: 3rem;
+  margin-top: 6rem;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+main {
+  min-height: calc(100% - 5rem);
+}
+
+footer {
+  height: 4rem;
+
+}
 
 
+/*** Spinner ***/
+#spinner {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .5s ease-out, visibility 0s linear .5s;
+  z-index: 99999;
+}
+
+#spinner.show {
+  transition: opacity .5s ease-out, visibility 0s linear 0s;
+  visibility: visible;
+  opacity: 1;
+}
 
 /*# sourceMappingURL=theme.css.map */

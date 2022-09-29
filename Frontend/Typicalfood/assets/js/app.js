@@ -123,3 +123,12 @@ function cerrarSesion() {
         }
     });
 }
+
+
+// Spinner
+var spinner = function () {
+    setTimeout(function () {
+        document.getElementById('spinner').classList.remove('show');
+    }, 1);
+};
+spinner();
