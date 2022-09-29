@@ -21451,4 +21451,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   border-radius: 25px;
 }
 
+input[type="text"] {
+  border-radius: 25px;
+}
+
+
+
+
 /*# sourceMappingURL=theme.css.map */

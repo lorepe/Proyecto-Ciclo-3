@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es-ES" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Typicalfood - Mis platillos</title>
+
+
+  <!-- ===============================================-->
+  <!--    Favicons-->
+  <!-- ===============================================-->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.ico">
+  <link rel="manifest" href="assets/img/favicons/manifest.json">
+  <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
+  <meta name="theme-color" content="#ffffff">
+
+
+  <!-- ===============================================-->
+  <!--    Stylesheets-->
+  <!-- ===============================================-->
+  <link href="assets/css/theme.css" rel="stylesheet" />
+
+</head>
+
+
+<body>
+
+  <main class="main" id="top">
+    <!-- ===============================================-->
+    <!--    Navbar    -->
+    <!-- ===============================================-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" data-navbar-on-scroll="data-navbar-on-scroll">
+      <div class="container-fluid"><a class="navbar-brand d-inline-flex" href="inicio.html"><img class="d-inline-block"
+            width="39" src="assets/img/gallery/logo.png" alt="logo" /><span
+            class="text-1000 fs-3 fw-bold ms-2 text-gradient">Typicalfood</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link mb-0 fw-bold text-lg-center active" aria-current="page" href="inicio.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mb-0 fw-bold text-lg-center" href="restaurantes.html">Restaurantes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mb-0 fw-bold text-lg-center" href="platillos.html">Platillos</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle mb-0 fw-bold text-lg-center" href="#" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Mi cuenta
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="mis-pedidos.html">Mis pedidos</a></li>
+                <li><a class="dropdown-item" href="mis-restaurantes.html">Mis restaurantes</a></li>
+                <li><a class="dropdown-item" href="mis-platillos.html">Mis platillos</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div>
+
+            <button class="btn btn-danger text-white btn-sm" id="buttonPage" type="submit" onclick="cerrarSesion()"> <i
+                class="fas fa-sign-out-alt me-2"></i>Cerrar sesión</button>
+
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+    <!-- ============================================-->
+    <!-- <section> begin ============================-->
+    <section class="py-0 bg-primary-gradient">
+
+      <div class="container">
+        <div class="row justify-content-center g-0">
+          <div class="col-xl-12">
+            <div class="col-lg-12 text-center mx-auto mb-3 mb-md-5 mt-4">
+              <!-- <h5 class="fw-bold text-danger fs-3 fs-lg-6 lh-sm my-6">Mis pedidos</h5> -->
+            </div>
+
+
+            <div class="card border-danger shadow-lg  my-7" style="height: 500px">
+              <div class="card-header border-danger">
+                <h4 class="fw-bold text-danger text-center">Mis platillos</h4>
+              </div>
+              <div class="card-body">
+                <!-- <h5 class="card-title">Warning card title</h5> -->
+                <div class="table-responsive">
+                  <table class="table table-bordered border-warning text-center  ">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Imagen</th>
+                        <th scope="col">Acciones</th>
+
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Lechona Huilense</td>
+                        <td>Disfruta de la tradición...</td>
+                        <td>$ 17.000</td>
+                        <td>lechona.jpg</td>
+                        <td>
+                          <button title="Editar" class="editar btn btn-sm btn-warning text-white" id="buttonPage"
+                            data-bs-toggle="modal" data-bs-target="#modal_editar_platillo"><i
+                              class=" fas fa-edit"></i></button>
+                          <button class="eliminar btn btn-sm btn-danger" title="Eliminar" id="buttonPage"
+                            onclick="eliminarPlatillo()"><i class=" fas fa-trash"></i></button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Pollo Frito</td>
+                        <td>Obtenga el mejor pollo frito...</td>
+                        <td>$ 24.000</td>
+                        <td>pollo-frito.jpg</td>
+                        <td>
+                          <button title="Editar" class="editar btn btn-sm btn-warning text-white" id="buttonPage"
+                            data-bs-toggle="modal" data-bs-target="#modal_editar_platillo"><i
+                              class=" fas fa-edit"></i></button>
+
+                          <button class="eliminar btn btn-sm btn-danger" title="Eliminar" id="buttonPage"
+                            onclick="eliminarPlatillo()"><i class=" fas fa-trash"></i></button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Ajiaco Colombiano</td>
+                        <td>Reúnase con familia o amigos...</td>
+                        <td>$ 35.000</td>
+                        <td>ajiaco.jpg</td>
+                        <td>
+                          <button title="Editar" class="editar btn btn-sm btn-warning text-white" id="buttonPage"
+                            data-bs-toggle="modal" data-bs-target="#modal_editar_platillo"><i
+                              class=" fas fa-edit"></i></button>
+                          <button class="eliminar btn btn-sm btn-danger" title="Eliminar" id="buttonPage"
+                            onclick="eliminarPlatillo()"><i class=" fas fa-trash"></i></button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="text-center ">
+                    <button type="button" class="btn btn-warning text-white btn-sm" id="buttonPage"
+                      data-bs-toggle="modal" data-bs-target="#modal_registro_platillo">
+                      </i> Agregar platillo</button>
+
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <!-- Inicio Modal Registrar Platillos -->
+        <div class="modal fade" id="modal_registro_platillo" tabindex="-1" aria-labelledby="exampleModalLabel"
+          aria-hidden="true" data-bs-keyboard="false" data-bs-backdrop="static">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title w-100 text-center" id=" exampleModalLabel">Agregar platillo</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+
+
+                  <div class="col-6">
+                    <label for="">Nombre</label>
+                    <input type="text" class="form-control" name="inputModal" id="txt_nombrePlatillo" placeholder=""
+                      autocomplete="off">
+                  </div>
+
+                  <div class=" col-6">
+                    <label for="">Descripcion</label>
+                    <input type="text" class="form-control" id="txt_descripcionPlatillo" placeholder=""
+                      autocomplete="off">
+                  </div>
+                  <br>
+                  <div class="col-6">
+                    <label for="">Precio</label>
+                    <input type="text" class="form-control" id="txt_precioPlatillo" placeholder="" autocomplete="off">
+                  </div>
+                  <div class="col-6">
+                    <label for="">Imagen</label>
+                    <input type="file" class="form-control" id="file_imagenPlatillo" placeholder="" autocomplete="off">
+                  </div>
+
+
+                </div>
+              </div>
+
+              <div class="modal-footer">
+
+                <button type="button" class="btn btn-primary text-white" id="buttonPage" data-bs-dismiss="modal"
+                  onclick="guardarPlatillo()">Guardar</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="buttonPage">Cerrar</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Fin Modal Registrar Platillos -->
+
+
+        <!-- Inicio Modal Editar Platillos -->
+        <div class="modal fade" id="modal_editar_platillo" tabindex="-1" aria-labelledby="exampleModalLabel"
+          aria-hidden="true" data-bs-keyboard="false" data-bs-backdrop="static">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title w-100 text-center" id=" exampleModalLabel">Editar restaurante</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+
+                  <div class="col-6">
+                    <label for="">Nombre</label>
+                    <input type="text" class="form-control" name="inputModal" id="txt_nombrePlatillo" placeholder=""
+                      autocomplete="off">
+                  </div>
+
+                  <div class=" col-6">
+                    <label for="">Descripcion</label>
+                    <input type="text" class="form-control" id="txt_descripcionPlatillo" placeholder=""
+                      autocomplete="off">
+                  </div>
+                  <br>
+                  <div class="col-6">
+                    <label for="">Precio</label>
+                    <input type="text" class="form-control" id="txt_precioPlatillo" placeholder="" autocomplete="off">
+                  </div>
+                  <div class="col-6">
+                    <label for="">Imagen</label>
+                    <input type="file" class="form-control" id="file_imagenPlatillo" placeholder="" autocomplete="off">
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="modal-footer">
+
+                <button type="button" class="btn btn-primary text-white" id="buttonPage" data-bs-dismiss="modal"
+                  onclick="editarPlatillo()">Guardar</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="buttonPage">Cerrar</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Fin Modal Editar Platillos -->
+
+
+
+
+
+    </section>
+    <!-- <section> close ============================-->
+    <!-- ============================================-->
+
+
+
+    <!-- ============================================-->
+    <!-- <section> begin ============================-->
+    <!-- <section class="py-0 pt-4 bg-1000">
+
+      <div class="container">
+
+        <div class="row flex-center pb-3">
+          <div class="col-md-6 order-0">
+            <p class="text-200 text-center text-md-start">Todos los derechos reservados &copy; Typicalfood, 2022</p>
+          </div>
+          <div class="col-md-6 order-1">
+            <p class="text-200 text-center text-md-end"> Hecho con&nbsp;
+              <svg class="bi bi-suit-heart-fill" xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                fill="#FFB30E" viewBox="0 0 16 16">
+                <path
+                  d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z">
+                </path>
+              </svg>&nbsp; por &nbsp;<a class="text-200 fw-bold" target="_self" href="acerca.html" target="_blank">Grupo
+                30 - Equipo 7 UTP - Misión TIC 2022
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!-- <section> close ============================-->
+    <!-- ============================================-->
+
+
+  </main>
+  <!-- ===============================================-->
+  <!--    End of Main Content-->
+  <!-- ===============================================-->
+
+
+
+
+  <!-- ===============================================-->
+  <!--    JavaScripts-->
+  <!-- ===============================================-->
+  <script src="assets/js/app.js"></script>
+  <script src="vendors/@popperjs/popper.min.js"></script>
+  <script src="vendors/bootstrap/bootstrap.min.js"></script>
+  <script src="vendors/is/is.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+  <script src="vendors/fontawesome/all.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&amp;display=swap"
+    rel="stylesheet">
+</body>
+
+<footer>
+  <section class="py-0 pt-4 bg-1000">
+
+    <div class="container">
+
+      <div class="row flex-center pb-3">
+        <div class="col-md-6 order-0">
+          <p class="text-200 text-center text-md-start">Todos los derechos reservados &copy; Typicalfood, 2022</p>
+        </div>
+        <div class="col-md-6 order-1">
+          <p class="text-200 text-center text-md-end"> Hecho con&nbsp;
+            <svg class="bi bi-suit-heart-fill" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#FFB30E"
+              viewBox="0 0 16 16">
+              <path
+                d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z">
+              </path>
+            </svg>&nbsp; por &nbsp;<a class="text-200 fw-bold" target="_self" href="acerca.html" target="_blank">Grupo
+              30 - Equipo 7 UTP - Misión TIC 2022
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</footer>
+
+</html>

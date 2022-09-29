@@ -53,24 +53,22 @@
             <li class="nav-item">
               <a class="nav-link mb-0 fw-bold text-lg-center" href="platillos.html">Platillos</a>
             </li>
-            <!-- <li class="nav-item dropdown">
+            <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle mb-0 fw-bold text-lg-center" href="#" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 Mi cuenta
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Mis pedidos</a></li>
-                <li><a class="dropdown-item" href="#">Mis restaurantes</a></li>
-                <li><a class="dropdown-item disabled">Configuración</a></li>
+                <li><a class="dropdown-item" href="mis-pedidos.html">Mis pedidos</a></li>
+                <li><a class="dropdown-item" href="mis-restaurantes.html">Mis restaurantes</a></li>
+                <li><a class="dropdown-item" href="mis-platillos.html">Mis platillos</a></li>
               </ul>
-            </li> -->
+            </li>
           </ul>
           <div>
-            <a href="login.html" class="btn btn-warning btn-sm text-white" id="buttonPage" type="submit"> <i
-                class="fas fa-user me-2"></i>Iniciar
-              sesión</a>
-            <a href="registro.html" class="btn btn-danger text-white btn-sm" id="buttonPage" type="submit"> <i
-                class="fas fa-user-plus me-2"></i>Regístrate</a>
+
+            <button class="btn btn-danger text-white btn-sm" id="buttonPage" type="submit" onclick="cerrarSesion()"> <i
+                class="fas fa-sign-out-alt me-2"></i>Cerrar sesión</button>
 
           </div>
         </div>
@@ -958,6 +956,8 @@
   <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
   <script src="vendors/fontawesome/all.min.js"></script>
   <script src="assets/js/theme.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&amp;display=swap"
     rel="stylesheet">
